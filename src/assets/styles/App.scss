@@ -1,4 +1,21 @@
+@import './Vars.scss';
+@import './Media.scss';
+
 body {
-  margin: 0;
-  background-color: #333;
+  margin: 0px;
+  font-family: $theme-font;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: $main-color;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: #212d40;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  border-right: 2px solid #212d40;
 }
