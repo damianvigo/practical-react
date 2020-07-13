@@ -47,6 +47,9 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    historyApiFallback: true, // permite el manejo de uso de rutas
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',

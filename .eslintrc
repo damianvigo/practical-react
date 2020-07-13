@@ -1,5 +1,5 @@
-// 20200701212818
-// https://gist.githubusercontent.com/gndx/60ae8b1807263e3a55f790ed17c4c57a/raw/0de495fc84df71ce97ef87c37505362f3512e1c3/eslintrc
+// 20200712163148
+// https://gist.githubusercontent.com/matias4205/e623b25c1f3c3859a072d9a98d8c1b10/raw/7980d59ae5c6cc8caf32f8d1c59d9de9268f8bd0/.eslintrc
 
 {
   "env": {
@@ -192,7 +192,6 @@
     "operator-assignment": 0,
     "operator-linebreak": [2, "after"],
     "padded-blocks": 0,
-    "prefer-const": 2,
     "quote-props": 0,
     "quotes": [2, "single", "avoid-escape"],
     "radix": 2,
