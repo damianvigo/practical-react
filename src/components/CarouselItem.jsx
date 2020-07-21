@@ -9,17 +9,19 @@ import removeIcon from '../assets/static/remove-icon.png';
 
 const CarouselItem = (props) => {
 
-  const { id, cover, title, year, contentRating, duration } = props;
+  const { id, cover, title, year, contentRating, duration, isList } = props;
 
   const handleSetFavorite = () => {
     props.setFavorite({
       id, cover, title, year, contentRating, duration,
     });
+    document.getElementById(id).style.display = 'none';
   };
 
   const handleDeleteFavorite = (itemId) => {
-    props.deleteFavorite(itemId)
-  }
+    props.deleteFavorite(itemId);
+    document.getElementById(id).style.display = 'inline';
+  };
 
   return (
     <div className='carousel-item'>
@@ -27,8 +29,11 @@ const CarouselItem = (props) => {
       <div className='carousel-item__details'>
         <div>
           <img className='carousel-item__details-icons' src={playIcon} alt='Play' />
-          <img className='carousel-item__details-icons' src={plusIcon} alt='Plus' onClick={handleSetFavorite} />
-          <img className='carousel-item__details-icons' src={removeIcon} alt='Plus' onClick={() => handleDeleteFavorite(id)} />
+
+          {isList ?
+            <img className='carousel-item__details-icons' src={removeIcon} alt='Remove' onClick={() => handleDeleteFavorite(id)} /> :
+            <img className='carousel-item__details-icons' src={plusIcon} alt='Plus' onClick={handleSetFavorite} id={id} />}
+
         </div>
         <p className='carousel-item__details--title'>{title}</p>
         <p className='carousel-item__details--subtitle'>
@@ -47,6 +52,7 @@ CarouselItem.propTypes = {
   duration: PropTypes.number,
 };
 
+// mapDispatchToProps: es un objeto con las distintas funciones para ejecutar una action en Redux.
 const mapDispatchToProps = {
   setFavorite,
   deleteFavorite,

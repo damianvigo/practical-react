@@ -14,7 +14,7 @@ const Home = ({ myList, trends, originals }) => {
         <Categories title='Mi lista'>
           <Carousel>
             {myList.map((item) => (
-              <CarouselItem key={item.id} {...item} />
+              <CarouselItem key={item.id} {...item} isList />
             ))}
           </Carousel>
         </Categories>
@@ -38,6 +38,7 @@ const Home = ({ myList, trends, originals }) => {
   );
 };
 
+// mapStateToProps: es una función que le va a indicar al provider qué información necesitamos del store.
 const mapStateToProps = (state) => {
   return {
     myList: state.myList,
