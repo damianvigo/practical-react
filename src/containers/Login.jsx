@@ -30,7 +30,7 @@ const Login = (props) => {
       <section className='login__container'>
         <h2 tabindex='0'>Inicia sesión</h2>
         <form className='login__container--form' onSubmit={handleSubmit}>
-          <input onChange={handleInput} name='email' aria-label='Correo' className='input' type='text' placeholder='Correo' autofocus />
+          <input onChange={handleInput} name='email' aria-label='Correo' className='input' type='text' placeholder='Correo' />
           <input
             onChange={handleInput}
             name='password'
