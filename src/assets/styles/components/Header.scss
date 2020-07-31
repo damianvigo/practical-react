@@ -54,6 +54,8 @@ ul:hover {
   margin-right: 8px;
   width: 40px;
   height: 40px;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
 .header__menu--profile p {
