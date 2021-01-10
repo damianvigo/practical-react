@@ -19,7 +19,9 @@ const Header = (props) => {
   return (
     <header className='header'>
       <Link to='/'>
-        <img className='header__img' src={logo} alt='Logo de Platzi Video' />
+        <figure>
+          <img className='header__img' src={logo} alt='Logo de Platzi Video' />
+        </figure>
       </Link>
       <div className='header__menu'>
         <div className='header__menu--profile'>
@@ -40,10 +42,10 @@ const Header = (props) => {
               </a>
             </li>
           ) : (
-            <li>
-              <Link to='/login'>Iniciar sesión</Link>
-            </li>
-          )}
+              <li>
+                <Link to='/login'>Iniciar sesión</Link>
+              </li>
+            )}
         </ul>
       </div>
     </header>
